@@ -1,0 +1,22 @@
+@import "../../styles/global";
+
+$footer-height: 100px;
+
+.container {
+  background-color: $color-palette-2;
+  width: $container-width;
+  height: $footer-height;
+  position: absolute;
+  bottom: 0;
+
+  .footer {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: $site-width;
+    height: $footer-height;
+    line-height: $footer-height;
+    color: $color-palette-3;
+    padding: 0px 20px;
+  }
+}
