@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 import styles from "./header.module.scss"
 
 //HeaderLink component
@@ -35,20 +35,35 @@ const SocialButton = props => {
 }
 
 export default () => (
-  <header className={styles.container}>
-    <div className={styles.row}>
-      <HomeButton to="/" text="HyeSoo's blog" />
-      <SocialButton site="github" username="flyjwayur">
-        Github
-      </SocialButton>
-      <SocialButton site="linkedin" username="hyesoopark-developer">
-        Linked In
-      </SocialButton>
-    </div>
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    //Result of this graphql query is going to be passed to the render property as data
 
-    <div className={styles.row}>
-      <HeaderLink className={styles.link} to="/" text="Home" />|
-      <HeaderLink className={styles.link} to="/about" text="About" />
-    </div>
-  </header>
+    render={data => (
+      <header className={styles.container}>
+        <div className={styles.row}>
+          <HomeButton to="/" text={data.site.siteMetadata.title} />
+          <SocialButton site="github" username="flyjwayur">
+            Github
+          </SocialButton>
+          <SocialButton site="linkedin" username="hyesoopark-developer">
+            Linked In
+          </SocialButton>
+        </div>
+
+        <div className={styles.row}>
+          <HeaderLink className={styles.link} to="/" text="Home" />|
+          <HeaderLink className={styles.link} to="/about" text="About" />
+        </div>
+      </header>
+    )}
+  />
 )

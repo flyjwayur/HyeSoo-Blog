@@ -1,12 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Title from "../components/Title"
 
 //data object
-export default ({ data }) => (
+export default () => (
   <Layout>
-    <Title text={data.site.siteMetadata.title} title="Hei there" />
+    <Title text="Welcome" title="Hei there" />
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel libero
       cursus, congue eros ut, auctor nisl. Nulla id vestibulum lorem. Sed nisi
@@ -22,14 +21,3 @@ export default ({ data }) => (
     </p>
   </Layout>
 )
-
-//Page component query
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
