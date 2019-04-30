@@ -1,7 +1,7 @@
 import React from "react"
-import styles from "./404.module.scss"
-import Layout from "../components/layout"
 import { Link } from "gatsby"
+import Layout from "../components/Layout"
+import styles from "./404.module.scss"
 
 //https://github.com/gatsbyjs/gatsby/blob/master/docs/docs/add-404-page.md
 export default () => (
