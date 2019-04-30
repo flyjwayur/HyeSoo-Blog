@@ -1,9 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Title from "../components/Title"
 
 export default () => (
   <Layout>
-    <h1>This is about page.</h1>
+    <Title text="About me" title="I am HyeSoo" />
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel libero
       cursus, congue eros ut, auctor nisl. Nulla id vestibulum lorem. Sed nisi
