@@ -17,4 +17,21 @@
     font-size: 17px;
     padding: 1rem;
   }
+
+  .homeButton {
+    display: inline-block;
+    background-color: $color-palette-1;
+    color: $color-palette-3;
+    padding: 1rem;
+    border-radius: 7px;
+    text-decoration: none;
+  }
+
+  .socialMediaButton {
+    display: inline-block;
+    background-color: $color-palette-2;
+    color: $color-palette-3;
+    padding: 1rem;
+    border-radius: 7px;
+  }
 }
