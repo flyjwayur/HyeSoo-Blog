@@ -3,9 +3,19 @@ import Layout from "../components/Layout"
 import Title from "../components/Title"
 
 //data object
-export default () => (
+export default ({ data }) => (
   <Layout>
     <Title text="Welcome" title="Hei there" />
+    <p>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <article>
+          <div>
+            <h1>{node.frontmatter.title}</h1>
+            <div>{node.excerpt}</div>
+          </div>
+        </article>
+      ))}
+    </p>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel libero
       cursus, congue eros ut, auctor nisl. Nulla id vestibulum lorem. Sed nisi
@@ -21,3 +31,22 @@ export default () => (
     </p>
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            image
+            date(formatString: "MMMM YYYY")
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
