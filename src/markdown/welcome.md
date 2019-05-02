@@ -1,8 +1,8 @@
 ---
 title: "Start to use Gatsby"
 date: "2019-05-02"
-image: "https://pixabay.com/photos/basket-vegetables-scuttle-tomato-2648251/"
-keywords: "blog"
+image: "https://res.cloudinary.com/dfy0o45bw/image/upload/c_scale,h_150,w_150/v1546504622/samples/animals/kitten-playing.gif"
+keywords: "gatsby"
 ---
 
 # Gatsby helps us to build a beautiful static website easily!
