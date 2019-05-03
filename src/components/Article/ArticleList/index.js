@@ -10,6 +10,9 @@ export default () => (
           totalCount
           edges {
             node {
+              fields {
+                slug
+              }
               id
               frontmatter {
                 title
@@ -27,7 +30,7 @@ export default () => (
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Article
             key={node.id}
-            to="/"
+            to={node.fields.slug}
             image={node.frontmatter.image}
             keywords={node.frontmatter.keywords}
             title={node.frontmatter.title}
