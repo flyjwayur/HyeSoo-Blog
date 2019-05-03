@@ -1,6 +1,16 @@
+//Width for a container and content
+
 $container-width: 100%;
 $site-width: 960px;
+
+//Colors
 $color-palette-1: #0984e3;
 $color-palette-2: #222f3e;
 $color-palette-3: #424242;
 $color-palette-4: #d3d3d3;
+$color-palette-5: #fafafa;
+
+//Remove the default margin in body
+body {
+  margin: 0;
+}

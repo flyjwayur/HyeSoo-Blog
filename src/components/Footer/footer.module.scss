@@ -6,9 +6,6 @@ $footer-height: 100px;
   background-color: $color-palette-2;
   width: $container-width;
   height: $footer-height;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 
   .footer {
     margin: auto;
@@ -17,7 +14,7 @@ $footer-height: 100px;
     max-width: $site-width;
     height: $footer-height;
     line-height: $footer-height;
-    color: $color-palette-3;
+    color: $color-palette-5;
     padding: 0px 20px;
   }
 }

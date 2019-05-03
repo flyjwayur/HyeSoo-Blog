@@ -21,7 +21,8 @@
   .homeButton {
     display: inline-block;
     background-color: $color-palette-1;
-    color: $color-palette-3;
+    color: $color-palette-5;
+    font-weight: 700;
     padding: 1rem;
     border-radius: 7px;
     text-decoration: none;
@@ -31,7 +32,7 @@
   .socialMediaButton {
     display: inline-block;
     background-color: $color-palette-2;
-    color: $color-palette-3;
+    color: $color-palette-5;
     padding: 1rem;
     border-radius: 7px;
     margin: 0.5rem;
